@@ -168,7 +168,7 @@ function displayBot() {
 
     //  when chatbot button is clicked
     //Activity1
-    $('').click(function () {
+    $('#open_button').click(function () {
 
         //  toggle the chatbot chat window
         $('.chatbox__chat').toggle()
@@ -182,8 +182,9 @@ function askBot() {
 
     //  when send button is clicked
     //Activity2
-    $("").click(function () {
+    $("#send_button").click(function () {
 
+    
         //  get text from textbox in chatbot
         var user_bot_input_text = $("#bot_input_text").val()
 
@@ -204,8 +205,9 @@ function askBot() {
 
                 //  write the same URL as written in app.py file
                 //Activity3
-                url: "",
-
+                //url: "./static/assets/datafiles/data_entry.csv",
+                //url: "./static/assets/chatbot_corpus/intents.json",
+                url:"/bot-response",
                 data: JSON.stringify(chat_input_data),
                 dataType: "json",
                 contentType: 'application/json',
